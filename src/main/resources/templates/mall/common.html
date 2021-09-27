@@ -20,8 +20,8 @@
         //        ]]>
     </script>
     <div class="layui-main">
-        <a class="logo" href="/mall/index.html">
-            <img th:src="@{/image/logo.png}"/>
+        <a class="logo" href="/index.html">
+            <img th:src="@{/image/logo.png}"  >
         </a>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <!--<ul class="layui-nav layui-layout-left">-->
@@ -40,7 +40,7 @@
                         if (data.state == 0) {
                             var list = $("#category");
                             $(data.data).each(function (index, item) {
-                                var cat = $("<dd><a href='/product/category.html?cid="+item.id+"'>" + item.cname + "</a></dd>");
+                                var cat = $("<dd><a href='/mall/product/category.html?cid="+item.id+"'>" + item.cname + "</a></dd>");
                                 list.append(cat);
                             })
                         } else {

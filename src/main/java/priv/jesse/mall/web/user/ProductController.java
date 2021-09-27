@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/mall/product")
 public class ProductController {
     @Autowired
     private ProductService productService;

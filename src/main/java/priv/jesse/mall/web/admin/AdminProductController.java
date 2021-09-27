@@ -63,7 +63,7 @@ public class AdminProductController {
     }
 
     @ResponseBody
-    @RequestMapping("/getTotal")
+    @RequestMapping("/getTotal.do")
     public ResultBean<Integer> getTotal() {
         Pageable pageable = PageRequest.of(1, 15);
         int total = (int) productService.findAll(pageable).getTotalElements();
@@ -134,7 +134,7 @@ public class AdminProductController {
         } catch (Exception e) {
             throw new Exception(e);
         }
-        response.sendRedirect("toList.html");
+        response.sendRedirect("list.html");
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/img/{filename:.+}")
